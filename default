@@ -1,0 +1,15 @@
+server {
+    listen 80;
+    server_name _;
+    index deploy.php   index.html;
+    root /usr/src/app/build/ ;
+    etag  on;
+    # set client body size to 50M #
+    client_max_body_size 50M;
+   # add_header Access-Control-Allow-Origin "*";
+    location / {
+                try_files $uri /index.html?$args;
+    }
+
+  
+}
