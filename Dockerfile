@@ -1,4 +1,4 @@
-FROM node:lts/erbium
+FROM node:12.22.1
 
 RUN ln -sf /usr/share/zoneinfo/Asia/Bangkok /etc/localtime
 RUN apt-get update && apt install -y nginx software-properties-common iputils-ping net-tools git wget nano rsync rclone htop
