@@ -1,4 +1,4 @@
-FROM node:10.24.0
+FROM node:10.24.0-slim
 
 RUN ln -sf /usr/share/zoneinfo/Asia/Bangkok /etc/localtime
 RUN apt-get update && apt install -y nginx software-properties-common iputils-ping net-tools git wget nano rsync rclone htop
